@@ -1,11 +1,11 @@
-﻿using Sales.Services;
-using Sales.Views;
-using System;
+﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace Sales
 {
+    using Sales.Views;
+
     public partial class App : Application
     {
 
@@ -13,8 +13,7 @@ namespace Sales
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
-            MainPage = new AppShell();
+            MainPage = new ProductsPage();
         }
 
         protected override void OnStart()
